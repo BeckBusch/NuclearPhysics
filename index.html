@@ -5,16 +5,35 @@
     <title>Nuclear Physics</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <style>
         p {
-            font-size:110%;
+            font-size: 110%;
         }
+
         .page-content {
-            padding:1em;
-            width:auto;
+            padding: 1em;
+            width: auto;
         }
-        .mdl-l
+
+        h2 {
+            font-family: "Roboto Slab", "Helvetica", "Arial", sans-serif;
+        }
+
+        p {
+            font-family: "Roboto", "Arial", "sans-serif";
+        }
+
+        td {
+            text-align: left !important;
+        }
+
+        .img {
+            margin-left:1em;
+            width: 32%;
+            float: right;
+        }
     </style>
 </head>
 <body>
@@ -28,90 +47,151 @@
         </div>
         <!-- Tabs -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Intro</a>
-            <a href="#fixed-tab-2" class="mdl-layout__tab">Power Plant Safety</a>
+            <a href="#fixed-tab-2" class="mdl-layout__tab is-active">Power Plant Safety</a>
             <a href="#fixed-tab-3" class="mdl-layout__tab">Power Plant Disaster</a>
             <a href="#fixed-tab-4" class="mdl-layout__tab">Human Safety</a>
             <a href="#fixed-tab-5" class="mdl-layout__tab">Human Effect</a>
         </div>
     </header>
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
-    </div>
+
     <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel" id="fixed-tab-1">
-            <div class="page-content">
-            </div>
-        </section>
         <section class="mdl-layout__tab-panel is-active" id="fixed-tab-2">
             <div class="page-content">
-
+                <img class="img"
+                     src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Nuclear_fission_reaction.svg">
                 <h2 style="text-align:center;">Power Plant Safety</h2>
-                <p style="font-size:135%;">Because nuclear power plants constantly deal with large amounts of radiation, heat and toxic material, let alone a sustained fission reaction, several design elements are needed to control these dangers.</p>
-                <img style="width:40%; float:right;" src="control.png">
-                <h4>Control Rods</h4>
+                <h4>What are Nuclear Power Plants?</h4>
                 <p>
-                    Control rods are a safety feature in power plants that allows workers to slow down or stop the reaction by absorbing the neutrons without continuing the chain reaction.
+                    Nuclear power plants harness the energy that is released when an atom splits through nuclear
+                    fission. Nuclear fission occurs when a neutron is absorbed into the nucleus of an atom, usually
+                    uranium-235, causing the atom to split into two smaller atoms while releasing three neutrons,
+                    several gamma rays, and a large amount of energy. This energy is used to heat up large volumes of
+                    water, which spin turbines that generate electricity. The three neurons that are released are able
+                    to continue on and cause more fission reactions. This creates a chain reaction which creates lots of
+                    energy very fast.
+                </p>
+                <img class="img" src="control.png">
+                <h4>What are Control Rods?</h4>
+                <p>
+                    Control rods are a safety feature in power plants that allows workers to slow down or stop the
+                    reaction by absorbing the neutrons without continuing the chain reaction.
                     Materials that are not fissile are introduced into the reactor which absorb the neutrons.
-                    Because they are not fissile, the collision with the neutron does not cause another fission reaction, and those neutrons do not contribute to the chain reaction.
-                    The materials that these rods are made out of are chosen based on their ability to absorb neutrons, which is quantified using the neutron capture cross-section.
-                    This is the cross area of an atom that can absorb neutrons. A common choice for control rods is boron.
-                    Boron has a large neutron capture cross section, but because of the way that it's elementary form behaves, it is used in alloys, such as high boron steel.
+                    Because they are not fissile, the collision with the neutron does not cause another fission
+                    reaction, and those neutrons do not contribute to the chain reaction.
+                    The materials that these rods are made out of are chosen based on their ability to absorb neutrons,
+                    which is quantified using the neutron capture cross-section.
+                    This is the cross area of an atom that can absorb neutrons. A common choice for control rods is
+                    boron.
+                    Boron has a large neutron capture cross section, but because of the way that it's elementary form
+                    behaves, it is used in alloys, such as high boron steel.
                     <br><br>
                     There is one important trait of nuclear fission that allows control rods to be effective.
-                    If neutrons could react with atoms adjacent to the atom that released them, then the control rods would somehow have to be placed in between the individual atoms of fuel.
+                    If neutrons could react with atoms adjacent to the atom that released them, then the control rods
+                    would somehow have to be placed in between the individual atoms of fuel.
                     Luckily, this is not the case as neutrons cannot react as soon as they are released.
-                    When Nuclear fission releases neutrons, they have a lot of energy, and are moving at very fast speeds.
-                    However the likelihood of a reaction occuring depends on the amount of energy the neutron has, the less energy the higher the chance.
-                    This means that until the neutrons have expended some of their energy by travelling away from the fuel rod that they came from, they will not react.
-                    This makes them travel through the space inbetween the fuel rods and allows them to be intercepted by a control rod.
+                    When Nuclear fission releases neutrons, they have a lot of energy, and are moving at very fast
+                    speeds.
+                    However the likelihood of a reaction occuring depends on the amount of energy the neutron has, the
+                    less energy it has, the higher the chance that it will trigger a fission reaction.
+                    This means that until the neutrons have expended some of their energy by travelling away from the
+                    fuel rod that they came from, they will not react.
+                    This makes them travel through the space inbetween the fuel rods and allows them to be intercepted
+                    by a control rod.
                 </p>
-                <h4>Containment Systems</h4>
-                <p></p>
+                <img class="img"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Fuel_Pellet.jpg/1024px-Fuel_Pellet.jpg?1535345485679">
+                <h4>How do Containment Systems Work?</h4>
+                <p>
+                    Between the gamma radiation, radioactive fuel, and high pressure steam, nuclear reactors have a lot
+                    of dangers that they need to protect against. The ideology for protecting against exposure or leaks
+                    is ‘Defence in Depth’, containing the nuclear reaction with four different systems.
+                    <br>
+                    The first is the ceramic fuel pellets. Instead of using elemental uranium in the reactor, uranium
+                    dioxide is used, as its physical properties are favourable. Not only is its melting point much
+                    higher (2865°C vs 1132°C), because its already an oxide, it can’t burn. This drastically reduces
+                    complications. To create these pellets, uranium trioxide is reacted with hydrogen to form uranium
+                    oxide. The uranium oxide is then pressed into pellets, and sintered to form a ceramic.
+                    <br>
+                    The second system is the fuel rods themselves. The fuel pellets are stacked and then sealed in
+                    tubes, along with coolant. These tubes are made of zirconium alloys, which are very corrosion
+                    resistant and have a low neutron capture area. The corrosion resistance prevents the fuel from
+                    leaking, while the low neutron capture area stops the neutrons interacting with something that’s not
+                    designed to control or limit the reaction.
+                    <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Kernkraftwerk_Grafenrheinfeld_-_2013.jpg">
+                    <br>
+                    The final containment system is the containment building. When people think of a nuclear power
+                    plant, they imagine a large hyperbolic structure. This structure does not contain the reactor, but
+                    rather, is just a water cooling tower. The reactor is actually contained within a cylindrical
+                    building, built to contain high pressure steam, or radioactive gas in the case of an emergency.
+                    Although some are made with lead, the most common designs use concrete reinforced with steel. This
+                    is because the containment building doesn’t need lead to block radiation, but rather high strength
+                    steel to contain steam pressure.
+                </p>
+                <h4>How does Water Cooling Work?</h4>
+                <p>
+
+                </p>
+                <hr>
+                <table style="width:100%;" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Topic</th>
+                        <th class="mdl-data-table__cell--non-numeric">FAQ</th>
+                        <th class="mdl-data-table__cell--non-numeric">Information</th>
+                        <th class="mdl-data-table__cell--non-numeric">Source</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Control Rods</td>
+                        <td>Control rods</td>
+                        <td>Neutrons don't react with adjacent atoms as they need to expend energy and slow down to
+                            react.
+                        </td>
+                        <td><a href="https://physics.stackexchange.com/questions/144329/how-do-control-rods-work">Stack
+                            Exchange</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href=""></a></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-            <div class="page-content"><!-- Your content goes here --></div>
+            <div class="page-content">
+                <h2 style="text-align:center;">Power Plant Disaster</h2>
+                <p style="font-size:135%;"></p>
+                <h4>What is a Meltdown?</h4>
+                <p>
+                </p>
+                <h4>What is a Criticality Accident?</h4>
+                <p>
+                </p>
+                <h4>How Dangerous is Decay Heat?</h4>
+                <p>
+                </p>
+                <h4>What is a Steam Explosion?</h4>
+                <p>
+                </p>
+            </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-4">
-            <div class="page-content"><!-- Your content goes here --></div>
+            <div class="page-content">
+                <h2 style="text-align:center;">Human Safety</h2>
+                <p style="font-size:135%;"></p>
+            </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-5">
-            <div class="page-content"><!-- Your content goes here --></div>
+            <div class="page-content">
+                <h2 style="text-align:center;">Human Effect</h2>
+                <p style="font-size:135%;"></p>
+            </div>
         </section>
     </main>
 </div>
-
-
-<!--<div id="main">
-    <h1 id="protection">Protection</h1>
-    <p>
-        Control rods are a safety feature in power plants that allows workers to slow down or stop the reaction by absorbing the neutrons without continuing the chain reaction. Materials that are not fissile are introduced into the reactor which absorb the neutrons. Because they are not fissile, the collision with the neutron does not cause another fission reaction, and those neutrons do not contribute to the chain reaction. The materials that these rods are made out of are chosen based on their ability to absorb neutrons, which is quantified using the neutron capture cross-section. This is the cross area of an atom that can absorb neutrons. A common choice for control rods is boron. Boron has a large neutron capture cross section, but because of the way that it's elementary form behaves, it is used in alloys, such as high boron steel.
-        There is one important trait of nuclear fission that allows control rods to be effective. If neutrons could react with atoms adjacent to the atom that released them, then the control rods would somehow have to be placed in between the individual atoms of fuel. Luckily, this is not the case as neutrons cannot react as soon as they are released. When Nuclear fission releases neutrons, they have a lot of energy, and are moving at very fast speeds. However the likelihood of a reaction occuring depends on the amount of energy the neutron has, the less energy the higher the chance. This means that until the neutrons have expended some of their energy by travelling away from the fuel rod that they came from, they will not react. This makes them travel through the space inbetween the fuel rods and allows them to be intercepted by a control rod.
-    </p>
-</div>
-<div id="sideNav">
-    <ul>
-        <li><a href="#h1">H1</a></li>
-        <li><a href="#h2">H2</a></li>
-        <li><a href="#h3">H3</a></li>
-        <li><a href="#h4">H4</a></li>
-        <li><a href="#1">1</a></li>
-        <li><a href="#2">2</a></li>
-        <li><a href="#3">3</a></li>
-        <li><a href="#4">4</a></li>
-        <li><a href="#5">5</a></li>
-        <li><a href="#6">6</a></li>
-        <li><a href="#7">7</a></li>
-        <li><a href="#8">8</a></li>
-        <li><a href="#9">9</a></li>
-        <li><a href="#10">10</a></li>
-        <li><a href="#11">11</a></li>
-        <li><a href="#12">12</a></li>
-        <li><a href="#13">13</a></li>
-        <li><a href="#14">14</a></li>
-        <li><a href="#15">15</a></li>
-    </ul>
-</div>-->
 </body>
 </html>
