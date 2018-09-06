@@ -34,10 +34,32 @@
             width: 32%;
             float: right;
         }
+
+        .boxImg {
+            width: 100%;
+        }
+
+        .link {
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .tiny {
+            width: 10%;
+        }
     </style>
 </head>
 <body>
-<!-- Simple header with fixed tabs. -->
+<div class="mdl-tooltip mdl-tooltip--large" for="fission">Fission</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="energy">Neutron Energy</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="fuel">Fuel Pellet</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="plant">Power Plant</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="contain">Pressure Vessel</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="meltdown">Molten Reactor Core</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="explode">Hydrogen Explosion</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="core">Recreation of the Demon Core Experiment</div>
+<div class="mdl-tooltip mdl-tooltip--large" for="tt2">Print</div>
+<!-- Simple header with fixed tabs.  <span class="link">[]</span> -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs">
     <header class="mdl-layout__header">
@@ -58,7 +80,7 @@
     <main class="mdl-layout__content">
         <section class="mdl-layout__tab-panel is-active" id="fixed-tab-2">
             <div class="page-content">
-                <img class="img"
+                <img class="img" id="fission"
                      src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Nuclear_fission_reaction.svg">
                 <h2 style="text-align:center;">Power Plant Safety</h2>
                 <h4>What are Nuclear Power Plants?</h4>
@@ -71,7 +93,7 @@
                     to continue on and cause more fission reactions. This creates a chain reaction which creates lots of
                     energy very fast.
                 </p>
-                <img class="img" src="control.png">
+                <img class="img" id="energy" src="control.png">
                 <h4>What are Control Rods?</h4>
                 <p>
                     Control rods are a safety feature in power plants that allows workers to slow down or stop the
@@ -82,7 +104,7 @@
                     their ability to absorb neutrons, which is quantified using the neutron capture cross-section. This
                     is the cross area of an atom that can absorb neutrons. A common choice for control rods is boron.
                     Boron has a large neutron capture cross section, but because of the way that it's elementary form
-                    behaves, it is used in alloys, such as high boron steel.
+                    behaves, it is used in alloys, such as high boron steel.<span class="link">[1]</span>
                     <br><br>
                     There is one important trait of nuclear fission that allows control rods to be effective. If
                     neutrons could react with atoms adjacent to the atom that released them, then the control rods would
@@ -93,21 +115,29 @@
                     chance it will trigger a fission reaction. This means that until the neutrons have expended some of
                     their energy by travelling away from the fuel rod that they came from, they will not react. This
                     makes them travel through the space inbetween the fuel rods and allows them to be intercepted by a
-                    control rod.
+                    control rod.<span class="link">[2]</span>
                 </p>
-                <img class="img"
-                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Fuel_Pellet.jpg/1024px-Fuel_Pellet.jpg?1535345485679">
+
+                <div class="img">
+                    <img class="boxImg" id="fuel"
+                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Fuel_Pellet.jpg/1024px-Fuel_Pellet.jpg?1535345485679">
+                    <br>
+                    <img class="boxImg" id="plant"
+                         src="https://upload.wikimedia.org/wikipedia/commons/3/34/Kernkraftwerk_Grafenrheinfeld_-_2013.jpg">
+                </div>
                 <h4>How do Containment Systems Work?</h4>
                 <p>
                     Between the gamma radiation, radioactive fuel, and high pressure steam, nuclear reactors have a lot
                     of dangers that they need to protect against. The ideology for protecting against exposure or leaks
-                    is ‘Defence in Depth’, containing the nuclear reaction with four different systems.
+                    is ‘Defence in Depth’, containing the nuclear reaction with four different systems.<span
+                        class="link">[3]</span>
                     <br>
                     The first is the ceramic fuel pellets. Instead of using elemental uranium in the reactor, uranium
                     dioxide is used, as its physical properties are favourable. Not only is its melting point much
                     higher (2865°C vs 1132°C), because its already an oxide, it can’t burn. This drastically reduces
                     complications. To create these pellets, uranium trioxide is reacted with hydrogen to form uranium
-                    oxide. The uranium oxide is then pressed into pellets, and sintered to form a ceramic. Sintering is
+                    oxide. The uranium oxide is then pressed into pellets, and sintered to form a ceramic.<span
+                        class="link">[4]</span> Sintering is
                     a process where the powder is heated up to near-melting. This causes it to join together and form a
                     solid without needing to melt.
                     <br>
@@ -115,42 +145,33 @@
                     tubes, along with coolant. These tubes are made of zirconium alloys, which are very corrosion
                     resistant and have a low neutron capture area. The corrosion resistance prevents the fuel from
                     leaking, while the low neutron capture area stops the neutrons interacting with something that’s not
-                    designed to control or limit the reaction.
-                    <img class="img"
-                         src="https://upload.wikimedia.org/wikipedia/commons/3/34/Kernkraftwerk_Grafenrheinfeld_-_2013.jpg">
+                    designed to control or limit the reaction.<span class="link">[5]</span>
+
                     <br>
                     The final containment system is the containment building. When people think of a nuclear power
                     plant, they imagine a large hyperbolic structure. This structure does not contain the reactor, but
                     rather, is just a water cooling tower. The reactor is actually contained within a cylindrical
                     building, built to contain high pressure steam, or radioactive gas in the case of an emergency.
-                    Although some are made with lead, the most common designs use concrete reinforced with steel. This
+                    Although some are made with lead, the most common designs use concrete reinforced with steel.<span
+                        class="link">[3]</span> This
                     is because the containment building doesn’t need lead to block radiation, but rather high strength
                     steel to contain steam pressure.
                 </p>
                 <h4>What Actually Contains the Reaction Itself?</h4>
                 <p>
-                    NOTE: this is random gibberish used in web and image design. it is here to put the images in the
-                    right place before I finish this question.
-                    <br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies sit amet erat a dignissim.
-                    Vestibulum rutrum a ex a sagittis. Donec dignissim ipsum eu elit commodo maximus. Integer id
-                    vehicula nulla. Integer at ante accumsan, cursus tellus pharetra, ornare metus. Integer lobortis
-                    arcu ipsum, nec aliquet augue sodales vitae. Ut mollis purus sed ipsum faucibus, id fermentum libero
-                    cursus. Nunc blandit vitae eros lacinia rutrum. Ut sed cursus sem, eu egestas ex. Donec vitae sem
-                    dictum, posuere nibh sed, iaculis nunc. Vestibulum ultrices lectus nec odio fringilla, cursus
-                    dapibus turpis volutpat. Nunc vehicula accumsan blandit.
-                    <img class="img"
+                    The third layer of defence is the Reactor Pressure Vessel. This is where the reaction itself occurs,
+                    so the vessel needs to be able to withstand one of the most extreme environments sustained on earth.
+                    To resist corrosion, the parts of the vessel that are in contact with the coolant are made from
+                    stainless steel with a high chromium content. The main body of the vessel is constructed from plate
+                    steel with a high nickel content. Nickel and chromium are important in the vessel because they have
+                    a high heat and pressure resistance, making them resistant to shock.
+                    <img class="img" id="contain"
                          src="https://upload.wikimedia.org/wikipedia/commons/5/55/Shippingport_LOC_135430pu.jpg">h
                     <br>
-                    Donec eget odio non massa eleifend pretium sed viverra nibh. Fusce in sodales mauris. Mauris eu
-                    facilisis nibh. Mauris malesuada dolor id tellus semper, in suscipit magna mollis. Proin sagittis
-                    massa in elit cursus lacinia. Donec at massa ut magna elementum tempus sit amet nec tortor. Nullam
-                    arcu est, suscipit ac ipsum vel, ultrices lacinia dolor. Suspendisse interdum metus nisl, et
-                    molestie metus placerat id. Ut faucibus eget odio sit amet porttitor. Quisque facilisis ultricies
-                    odio, ac blandit justo mollis et. Aliquam dapibus, enim eu fermentum iaculis, urna nisl consectetur
-                    nibh, ut pellentesque metus diam nec est. Aenean purus lorem, consectetur rhoncus fermentum quis,
-                    fermentum nec ipsum. Etiam id elit at magna tincidunt ornare ut a ante. Nunc mollis purus ipsum, sit
-                    amet luctus velit gravida eget.
+                    Corrosion is a big problem in the pressure vessel because the metal is constantly being bombarded
+                    with high energy particles. When these particles hit atoms in the steel, they can transfer their
+                    energy and knock the atom out of the lattis, creating defects in the metal which can turn into
+                    cracks, which isn’t the best thing to have in a pressure vessel.<span class="link">[23]</span>
                 </p>
                 <h4>How does Water Cooling Work?</h4>
                 <p>
@@ -158,13 +179,14 @@
                     means that the plant uses normal water instead of heavy water, which is water with hydrogen atoms
                     that have extra neutrons. There are three types of light water reactors; pressurized water reactors,
                     boiling water reactors, and supercritical water reactors, the latter being far less common than the
-                    first two.
+                    first two.<span class="link">[6]</span>
                     <br>
                     Any atoms in close proximity to radiation have the potential to absorb neutrons into their nucleus.
                     When this happens, the atom can become unstable and emit these extra neutrons into the environment
                     at predictable but ultimately random intervals. The large amount of water in a nuclear power plant
                     are highly susceptible to absorbing neutrons and therefore large quantities of oxygen turn into
-                    nitrogen-16, a radioactive isotope that decays after 7 seconds to release a deadly gamma ray.
+                    nitrogen-16, a radioactive isotope that decays after 7 seconds to release a deadly gamma ray.<span
+                        class="link">[7]</span>
                     <br>
                     Nitrogen-16 is responsible for one of the main flaws in boiling water reactors. Boiling waters pump
                     water into the reactor core to the turned into steam. This steam then exits the reactor core and is
@@ -174,7 +196,8 @@
                     is pressurised water reactors. Pressurized water reactors use two water systems to contain the water
                     that gets exposed to radiation. Just like BWRs, water is pumped into the reactor core to be heated.
                     The difference is that this heated water is then used to heat more water while remaining in its
-                    pipes. This way the reactor can boil water while not creating large amounts of radioactive water.
+                    pipes. This way the reactor can boil water while not creating large amounts of radioactive
+                    water.<span class="link">[6]</span>
                 </p>
                 <table>
                     <tbody>
@@ -195,7 +218,7 @@
             <div class="page-content">
                 <h2 style="text-align:center;">Power Plant Disaster</h2>
                 <p style="font-size:135%;"></p>
-                <img class="img"
+                <img class="img" id="meltdown"
                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Graphic_TMI-2_Core_End-State_Configuration.png/324px-Graphic_TMI-2_Core_End-State_Configuration.png">
                 <h4>What is a Meltdown?</h4>
                 <p>
@@ -205,7 +228,7 @@
                     out. The zirconium metal can, at such high temperatures, react with the uranium dioxide used as fuel
                     to form metallic uranium.
                     <br>
-                    &emsp;&emsp;Zr + UO2 → ZrO2 + U
+                    &emsp;&emsp;Zr + UO2 → ZrO2 + U&emsp;<span class="link">[8]</span>
                     <br>
                     Among other things, this lowers the melting point to the fuel, allowing it to leak out of the fuel
                     rods and into the reactor. The now molten fuel will then continue to melt through most layers of the
@@ -215,7 +238,7 @@
                     and even concrete. This mixture creates an eutectic system, meaning that melting point of the
                     mixture is lower than the melting point of many of the individual substances. Because of this, it
                     will stay liquid for longer and pose a much greater risk to leaking radioactive substances into the
-                    surrounding environment.
+                    surrounding environment.<span class="link">[9]</span>
                 </p>
                 <h4>What is a Steam Explosion?</h4>
                 <p>
@@ -231,8 +254,10 @@
                     periodically release them into the environment as radiation. The water in a power plant has high
                     exposure to the radioactive core and radioactive hydrogen is very common. If water made from
                     radioactive hydrogen escapes from the reactor and floats away as steam, it can have a large impact
-                    on the surrounding environment.
+                    on the surrounding environment.<span class="link">[10]</span>
                 </p>
+                <img class="img" id="explode"
+                     src="https://i.telegraph.co.uk/multimedia/archive/01847/japan-fire_1847194i.jpg">
                 <h4>How does a Hydrogen Explosion Occur?</h4>
                 <p>
                     Zirconium alloys, or Zircaloys, are very popular in nuclear power plants as fuel rod casing. This is
@@ -241,60 +266,488 @@
                     disadvantage. At temperatures of above 1200°C, zirconium will react exothermically with water to
                     oxidise, and produce free hydrogen gas.
                     <br>
-                    &emsp;&emsp;Zr + 2 H2O → ZrO2 + 2 H2
+                    &emsp;&emsp;Zr + 2 H2O → ZrO2 + 2 H2&emsp;<span class="link">[8]</span>
                     <br>
                     Not only does this reaction create hydrogen gas, but also it provides more heat to facilitate more
                     reactions. The large amount of hydrogen gas produced is extremely combustible, forming explosive
                     mixtures in air with as little as 4% concentration, that can be ignited by small amounts of heat,
-                    something that is definitely not is short supply in the middle of a meltdown.
+                    something that is definitely not is short supply in the middle of a meltdown.<span
+                        class="link">[11]</span>
                     The resulting explosion can severely damage containment buildings and cause large amounts of
                     radioactive material to leak into the surrounding environment. This occured in reactors 1, 2, and 3
-                    of the Fukushima disaster.
+                    of the Fukushima disaster.<span class="link">[12]</span>
                 </p>
+                <img class="img" id="core"
+                     src="https://upload.wikimedia.org/wikipedia/commons/1/13/Partially-reflected-plutonium-sphere.jpeg">
                 <h4>What is a Criticality Accident?</h4>
                 <p>
+                    In nuclear physics, a mass of nuclear material is said to be in a critical state when its fission
+                    chain reaction is self sustaining. This occurs when the conditions are right for the neutrons
+                    emitted by the reaction to cause another reaction in the same mass of material, allowing the fission
+                    reaction to continue inside the middle of the material. Although there are several factors that can
+                    cause criticality, the two most common factors are the size of the mass, and neutron reflection.
+                    Because neutrons need to travel a certain distance to lose energy before they can react, having a
+                    larger mass increases the possibility that a neutron will still be inside the mass of material when
+                    it is able to react.<span class="link">[13]</span>
+                    <br>
+                    Neutron reflection will also cause criticality in fissile material. By using materials such as
+                    beryllium, you can reflect the neutrons emitted by the material back at the material. This means
+                    that almost every neutron produced will go on to create another reaction. A two famous examples of
+                    criticality accidents caused by neutron reflection are the deaths of Louis Slotin and Harry
+                    Daghlian. Although they were killed by two different experiments, both involved using beryllium to
+                    investigate criticality. Ironically the same radiation source was used in both experiments, a 6
+                    kilogram sphere of plutonium aptly nicknamed the ‘Demon Core’, after causing the deaths of two
+                    people. The design of the core meant that it was always 95% critical so that it would be easy for
+                    scientists to achieve criticality for an experiment.<span class="link">[15]</span> Louis Slotins
+                    experiment involved containing
+                    the core between two hemispheres of beryllium. The problem occured when Louis broke safety
+                    regulations and used the blade of a screwdriver to separate the hemispheres instead of the provided
+                    spacers. When the screwdriver fell out, the gap between the hemispheres was closed and the beryllium
+                    started to reflect all of the neutrons, causing the core to go critical.<span
+                        class="link">[14]</span> When a nuclear mass becomes
+                    critical it emits neutron radiation, a form of ionising radiation as free neutrons. This radiation
+                    is extremely deadly to all forms of life. Louis was able to separate the hemispheres before the
+                    radiation became powerful enough to effect the 7 other people in the room, but not before he
+                    received a lethal dose of radiation himself.
                 </p>
+
             </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-4">
             <div class="page-content">
                 <h2 style="text-align:center;">Human Safety</h2>
-                <p style="font-size:135%;"></p>
+                <img class="img"
+                     src="https://slideplayer.com/slide/4095615/13/images/50/Kodak+Type+2+Radiographic+Film.jpg">
+                <h4>What is a Dosimeter Badge?</h4>
+                <p>
+                    A dosimeter badge, sometimes called a film badge, is a badge made for people working in close
+                    proximity to radiation. When providing medical care to someone who is suffering from radiation
+                    poisoning or a similar illness, knowing the intensity of the radiation dose they received is very
+                    helpful and allows you to make better decisions. A dosimeter badge works in a similar way to the
+                    film in a camera, in fact, the same type of film is used. Photographic film of varying grain size is
+                    placed into a plastic case behind several different metal filters. These metal filters are able to
+                    block certain types of radiation in some areas of the film, allowing for a more detailed reading of
+                    radiation exposure. The badge also contains a form of ID. This allows the badge to be used as a
+                    security badge while linking the readings from the badge to the person wearing it. When the film is
+                    read, it is removed from the plastic case to be developed. Because the film is photographic film it
+                    must be stored, even when sitting in the case, in a light protective packet. The film is developed
+                    in a dark room with similar techniques used to develop photographs, and the radiation is recorded
+                    based on the intensity of the ‘images’ that appear on each section of the film.<span class="link">[16]</span>
+                </p>
+                <img class="img" src="mask.jpg">
+                <h4>How do Respiration Masks Work?</h4>
+                <p>
+                    Although powerful rays of ionizing radiation are very harmful, it is more common to sustain damage
+                    from small airborne particles of radioactive material. Ionising alpha radiation can be emitted by
+                    tiny flakes of radioactive material.<span class="link">[17]</span> Alpha particles (when produced by
+                    radioactive decay) have a low
+                    penetration strength, and are able to be stopped by a few centimeters of air or just skin.<span
+                        class="link">[18]</span> But if
+                    the tiny particles of radioactive material were they to be inhaled, they could settle in the lungs
+                    and emit radiation right next to the body's most important and delicate organs. Because the
+                    radioactive particles released by the material have low penetration strengths, respiration equipment
+                    does not need to shield against radiation using metals like lead. Instead they just need to filter
+                    out dust and small particles, making them no different from the respiration equipment used in other
+                    industries. Ironically one of the most important pieces of radiation protection has very little to
+                    do with radiation in particular.
+                </p>
+                <img class="img" src="https://stemrad.com/wp-content/uploads/2014/10/Professional_fig_01.jpg">
+                <h4>How are Radiation suits Designed?</h4>
+                <p>
+                    Most forms of radiation protection are designed off the fact that radioactive particles are able to
+                    damage human cells due to their large amount of energy. If the energy of these particles can be
+                    removed, then they will pose little to no threat to the body. This is simple enough to do with weak
+                    forms of radiation such as x-rays. Lead aprons are used around x-ray machines to protect vulnerable
+                    parts of the body, or to protect doctors who have longer exposure.<span class="link">[19]</span> As
+                    the x-rays pass through the
+                    lead, the high density and electron count of the metal dissipate the energy of the x-rays and stop
+                    them dealing damage.<span class="link">[20]</span> A relatively thin layer of lead is enough to
+                    block x-rays, but it is much
+                    harder to protect against the higher energy gamma rays. The best gamma protection available is the
+                    ‘StemRad 360 Gamma’. The 360 Gamma is a cross between a vest and a belt, designed to protect the
+                    body from radiation poisoning.<span class="link">[21]</span> While the shield covers a small amount
+                    of the body compared to a full
+                    apron, it is designed to fully protect the pelvis bone. This is because humans suffer the most
+                    damage when radiation effects the bone marrow and stops the production of blood cells. By protecting
+                    the pelvis, a large amount of marrow can be protected, allowing the body to naturally regenerate the
+                    rest of the bone marrow.<span class="link">[22]</span>
+                </p>
             </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-5">
             <div class="page-content">
                 <h2 style="text-align:center;">Human Effect</h2>
-                <p style="font-size:135%;"></p>
+                <h4>What is Radiation Poisoning?</h4>
+                <p>
+                    Acute Radiation Syndrome, commonly called radiation poisoning, is the name given to a group of
+                    several negative health effects that are caused by exposure to a high dose of ionising radiation.<span class="link">[24]</span>
+                    Depending on the dose you receive, the results can be extremely severe and onset very quickly. For
+                    example, patients receiving 2-6 grays on radiation can experience nausea and vomiting within 2
+                    hours, while patients receiving 30+ grays will experience severe headaches and seizures within 1
+                    hours. There are three main areas that are affected; the blood system, the nervous system, and the
+                    gastrointestinal system. The blood system is damaged through aplastic anemia, which is when the bone
+                    marrow is damaged leading to a drop in the amount of blood cells.<span class="link">[25]</span> This is not fatal in small doses,
+                    but can complicate other infuries like burns or cuts, because there aren’t enough white blood cells
+                    to heal the body. Aplastic anemia occurs when the radiation damages the bone marrow. The bone marrow
+                    is particularly vulnerable because it is all over the body and close under the skin, making it an
+                    easy target for radiation with low penetration strength. Gastrointestinal symptoms are common
+                    because the body's digestive system involves many small parts. These are particularly vulnerable to
+                    radiation because a smaller amount of cells being damaged has a larger effect.
+                    <br>
+                    By far the most fatal symptoms are neurovascular. Due to how delicate the brain is, and how wide
+                    spread the nervous system is, when receiving high doses of radiation neurovascular damage is common.
+                    Neurovascular damage almost always leads to death after seizures, ataxia and loss of consciousness.
+                    When ionising radiation is able to kill important cells in the brain, these symptoms are very easy
+                    to develop and highly damaging.
+                </p>
+                <h4>What are Radiation Burns?</h4>
+                <p>
+                    Radiation burns are areas of the skin that have been damaged by radiation. ‘Burn’ is used in its
+                    wider sense as ‘damage to the skin’ like with chemical or cold burns, as opposed to the more common
+                    sense of heat injury.<span class="link">[26]</span> Radiation burns are actually extremely common, with millions of people each
+                    year getting sunburns. Sunburns are a type of radiation burn as it is not heat, but the direct UV
+                    radiation that damages the skin. Sunburn occurs when radiation from the sun penetrates the skin and
+                    damages the DNA in the skin cells.<span class="link">[27]</span> This causes the cells to die from apoptosis (cell suicide) but
+                    not before increasing the blood flow to the area, causing redness and a hot sensation. This hot
+                    sensation is commonly misinterpreted as the skin still burning, furthering the misconception that
+                    heat, not radiation, causes sunburn.
+                    <br>
+                    Radiation burns from stronger forms of radiation work the same way, just on a larger scale. Gamma
+                    rays can penetrate much deeper into the skin, as they have more energy, causing what some describe
+                    as a “three dimensional sunburn”.<span class="link">[28]</span>
+                </p>
+                <h4>How can you get Cancer from Radiation?</h4>
+                <p>While most interactions between cells and radiation damage or destroy the cell, sometimes the cell,
+                    or rather the cells DNA, can become mutated.<span class="link">[29]</span> This is when the cell is affected enough to change how
+                    it works, but can still survive. This is often worse as it leads to cancer forming when the affected
+                    cell reproduces at an uncontrolled rate. Radiation is said to be responsible for 10% of invasive
+                    cancers.
+                    <br>
+                    Ionising radiation causes atoms to lose their electrons and become ions. This breaks chemical bonds
+                    and changes the structure of the molecule. If the cell is changed in the right way, the cell can
+                    become cancerous.
+                </p>
             </div>
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-1">
             <div class="page-content">
                 <h2 style="text-align:center;">Sources</h2>
-                <table style="width:100%;" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-                    <thead>
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                     <tr>
-                        <th class="mdl-data-table__cell--non-numeric">Topic</th>
-                        <th class="mdl-data-table__cell--non-numeric">FAQ</th>
-                        <th class="mdl-data-table__cell--non-numeric">Information</th>
-                        <th class="mdl-data-table__cell--non-numeric">Source</th>
+                        <th>What is Fission</th>
+                        <th></th>
+                        <th></th>
                     </tr>
-                    </thead>
+                    <tr>
+                        <td>Control Rods</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Energy Levels</td>
+                        <td>https://physics.stackexchange.com/questions/144329/how-do-control-rods-work</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Design</td>
+                        <td>https://en.wikipedia.org/wiki/Control_rod</td>
+                    </tr>
+                    <tr>
+                        <td>Containment Systems</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Construction</td>
+                        <td>https://en.wikipedia.org/wiki/Containment_building</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Benefits of fuel pellets</td>
+                        <td>https://www.britannica.com/technology/nuclear-ceramics</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>How fuel rods work</td>
+                        <td>https://en.wikipedia.org/wiki/Nuclear_fuel#Common_physical_forms_of_nuclear_fuel</td>
+                    </tr>
+                    <tr>
+                        <td>Cooling</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>differences</td>
+                        <td>https://en.wikipedia.org/wiki/Light-water_reactor</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Danger of N-16</td>
+                        <td>https://mitnse.files.wordpress.com/2011/03/radiation_npp_07.pdf</td>
+                    </tr>
+                    <tr>
+                        <td>Pressure vessel?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Whole Thing</td>
+                        <td>https://en.wikipedia.org/wiki/Reactor_pressure_vessel</td>
+                    </tr>
+                    <tr>
+                        <td>Meltdown</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Equation</td>
+                        <td>https://www.cogentoa.com/article/10.1080/23312009.2015.1049111.pdf</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Whole Thing</td>
+                        <td>https://en.wikipedia.org/wiki/Nuclear_meltdown</td>
+                    </tr>
+                    <tr>
+                        <td>Steam Explosion</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Whole Thing</td>
+                        <td>https://en.wikipedia.org/wiki/Steam_explosion</td>
+                    </tr>
+                    <tr>
+                        <td>Hydrogen Explosion</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Equation</td>
+                        <td>https://www.cogentoa.com/article/10.1080/23312009.2015.1049111.pdf</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Third Paragraph</td>
+                        <td>https://en.wikipedia.org/wiki/Hydrogen#Combustion</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Fukushima</td>
+                        <td>https://en.wikipedia.org/wiki/Fukushima_Daiichi_nuclear_disaster#Units_1,_2,_and_3</td>
+                    </tr>
+                    <tr>
+                        <td>Criticality</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td></td>
+                        <td>https://en.wikipedia.org/wiki/Criticality_accident</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td></td>
+                        <td>https://en.wikipedia.org/wiki/Louis_Slotin#Criticality_accident</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td></td>
+                        <td>https://en.wikipedia.org/wiki/Demon_core#First_incident</td>
+                    </tr>
+                    <tr>
+                        <td>Dosimeter Badge</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Whole thing</td>
+                        <td>https://en.wikipedia.org/wiki/Film_badge_dosimeter</td>
+                    </tr>
+                    <tr>
+                        <td>Respiration mask</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>First sentence</td>
+                        <td>https://en.wikipedia.org/wiki/Radiation_protection</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Alpha particles</td>
+                        <td>https://en.wikipedia.org/wiki/Alpha_particle</td>
+                    </tr>
+                    <tr>
+                        <td>Radiation Suit</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Whole Thing</td>
+                        <td>https://en.wikipedia.org/wiki/Radiation_protection</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Lead Shielding</td>
+                        <td>https://en.wikipedia.org/wiki/Lead_shielding</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>360 Gamma</td>
+                        <td>https://stemrad.com/stemrad-product/professional-radiation-shield/</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Bone Marrow</td>
+                        <td>https://stemrad.com/wp-content/uploads/2016/11/StemRad_Brochure.pdf</td>
+                    </tr>
+                    <tr>
+                        <td>Radiation Poisoning</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Whole Thing</td>
+                        <td>https://en.wikipedia.org/wiki/Acute_radiation_syndrome</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Aplastic Anemia</td>
+                        <td>https://en.wikipedia.org/wiki/Aplastic_anemia</td>
+                    </tr>
+                    <tr>
+                        <td>Radiation Burn</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Whole Thing</td>
+                        <td>https://en.wikipedia.org/wiki/Radiation_burn</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Sunburn</td>
+                        <td>https://en.wikipedia.org/wiki/Sunburn</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>3D Sunburn</td>
+                        <td>https://www.newyorker.com/tech/elements/demon-core-the-strange-death-of-louis-slotin</td>
+                    </tr>
+                    <tr>
+                        <td>Cancer</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Whole Thing</td>
+                        <td>https://en.wikipedia.org/wiki/Radiation-induced_cancer</td>
+                    </tr>
+                </table>
+                <h4>Image Sources</h4>
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                     <tbody>
                     <tr>
-                        <td>Power Plant Safety</td>
-                        <td>Control rods</td>
-                        <td>Neutrons don't react with adjacent atoms as they need to expend energy and slow down to
-                            react.
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Nuclear_fission_reaction.svg">
                         </td>
-                        <td><a href="https://physics.stackexchange.com/questions/144329/how-do-control-rods-work">Stack
-                            Exchange</a></td>
+                        <td>
+                            <a href="https://upload.wikimedia.org/wikipedia/commons/a/a8/Nuclear_fission_reaction.svg">upload.wikimedia.org/wikipedia/commons/</a>
+                        </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href=""></a></td>
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Fuel_Pellet.jpg/1024px-Fuel_Pellet.jpg?1535345485679">
+                        </td>
+                        <td>
+                            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Fuel_Pellet.jpg/1024px-Fuel_Pellet.jpg?1535345485679">upload.wikimedia.org/wikipedia/commons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/3/34/Kernkraftwerk_Grafenrheinfeld_-_2013.jpg">
+                        </td>
+                        <td>
+                            <a href="https://upload.wikimedia.org/wikipedia/commons/3/34/Kernkraftwerk_Grafenrheinfeld_-_2013.jpg">upload.wikimedia.org/wikipedia/commons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/5/55/Shippingport_LOC_135430pu.jpg">
+                        </td>
+                        <td><a href="https://upload.wikimedia.org/wikipedia/commons/5/55/Shippingport_LOC_135430pu.jpg">upload.wikimedia.org/wikipedia/commons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/4/4a/BoilingWaterReactor.gif"></td>
+                        <td><a href="https://upload.wikimedia.org/wikipedia/commons/4/4a/BoilingWaterReactor.gif">upload.wikimedia.org/wikipedia/commons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/a/a0/PressurizedWaterReactor.gif">
+                        </td>
+                        <td><a href="https://upload.wikimedia.org/wikipedia/commons/a/a0/PressurizedWaterReactor.gif">upload.wikimedia.org/wikipedia/commons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Graphic_TMI-2_Core_End-State_Configuration.png/324px-Graphic_TMI-2_Core_End-State_Configuration.png">
+                        </td>
+                        <td>
+                            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Graphic_TMI-2_Core_End-State_Configuration.png/324px-Graphic_TMI-2_Core_End-State_Configuration.png">upload.wikimedia.org/wikipedia/commons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://i.telegraph.co.uk/multimedia/archive/01847/japan-fire_1847194i.jpg"></td>
+                        <td><a href="https://i.telegraph.co.uk/multimedia/archive/01847/japan-fire_1847194i.jpg">i.telegraph.co.uk/multimedia/archive</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/1/13/Partially-reflected-plutonium-sphere.jpeg">
+                        </td>
+                        <td>
+                            <a href="https://upload.wikimedia.org/wikipedia/commons/1/13/Partially-reflected-plutonium-sphere.jpeg">upload.wikimedia.org/wikipedia/commons</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://slideplayer.com/slide/4095615/13/images/50/Kodak+Type+2+Radiographic+Film.jpg">
+                        </td>
+                        <td>
+                            <a href="https://slideplayer.com/slide/4095615/13/images/50/Kodak+Type+2+Radiographic+Film.jpg">slideplayer.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny" src="http://www.afcintl.com/Portals/0/1/H01-1221%20SR%20200%20PC.jpg">
+                        </td>
+                        <td>
+                            <a href="http://www.afcintl.com/Portals/0/1/H01-1221%20SR%20200%20PC.jpg">www.afcintl.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="tiny"
+                                 src="https://stemrad.com/wp-content/uploads/2014/10/Professional_fig_01.jpg"></td>
+                        <td><a href="https://stemrad.com/wp-content/uploads/2014/10/Professional_fig_01.jpg">stemrad.com/wp-content/uploads</a>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
